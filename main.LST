@@ -1,0 +1,174 @@
+C51 COMPILER V7.06   MAIN                                                                  05/26/2024 18:20:27 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: H:\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /**
+   2          * Copyright (C) wificar, Inc.
+   3          * 主驱动控制程序，包含数字信号，模拟信号之间转换 波特率之间解陆饴虢饴
+   4          * @author txf
+   5          * @date 2020-04-12 12:12:12
+   6          */
+   7          #include<reg52.h> //包含头文件，一般情况不需要改动，头文件包含特殊功能寄存器的定义
+   8          #include "util.h"
+   9          #define uchar unsigned char 
+  10          #define uint unsigned int
+  11          unsigned char code dofly_DuanMa[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};// 显示段码值0~9
+  12          sbit Trig  = P3^4; //雷达产生脉冲引脚
+  13          sbit Echo  = P3^5; //接收雷达回波引脚
+  14          sbit p1 = P1^0;
+  15          sbit p2 = P1^1;
+  16          uint switch_action = -1;
+  17          /*****************声明函数开始***************/
+  18          
+  19          void init_com_port ( void );
+  20          void drive_execute(uchar temp);
+  21          /*****************声明函数结束***************/
+  22          //*****************程序入口***************************************
+  23          
+  24          void init_com_port ( void ) {
+  25   1              SCON = 0x50;    /*SCON:work mode 1,8-bit UART E:receive */
+  26   1          TMOD |= 0x20;       /*TMOD time 1,mode 2 , 8-bit reload*/
+  27   1         // PCON = 0x00;
+  28   1              TH1 = 0xFd;    /*TH1: reload value for 9600 baud @ 11.0592MHZ 波特率*/
+  29   1              //TL1 = 0xFd;
+  30   1              TR1 = 1;                /*TR1 time 1 run*/
+  31   1              EA = 1;  /*open Headquarters suspend*/
+  32   1              ES = 1;  /*open com port suspend*/      
+  33   1              //IT0=0;
+  34   1              //EX0=1; 
+  35   1      }
+  36          
+  37          /*********************外部中断0初始化**********************/
+  38          void ex_init( void ) {
+  39   1              IT0 = 1;//指定外部中断0下降沿触发，INT0 (P3.2
+  40   1              EX0 = 1;//使能外部中断
+  41   1              EA = 1; //开总中断
+  42   1      }
+  43          
+  44          /********************定时器0初始化*************/
+  45          void tim_init( void ) {
+  46   1              TMOD = 0X02;//定时器0工作方式2，TH0是重装值，TL0是初值
+  47   1              TH0=0x00; //重载值
+  48   1              TL0=0x00; //初始化值
+  49   1              ET0=1;    //开中断
+  50   1              TR0=1; 
+  51   1      }
+  52          
+  53          // 串口中断程序
+  54          void com_port ( void ) interrupt 4 {
+  55   1              unsigned char temp;
+C51 COMPILER V7.06   MAIN                                                                  05/26/2024 18:20:27 PAGE 2   
+
+  56   1              if(RI) {
+  57   2                      RI = 0;/*RI: flag reset*/
+  58   2                      temp = SBUF; /*receive value*/
+  59   2                      drive_execute(temp); 
+  60   2              }
+  61   1      }
+  62          
+  63          void main ( void ) {
+  64   1              uint index = 0;
+  65   1              init_com_port();
+  66   1              while (1) {
+  67   2                      if(0 == switch_action){
+  68   3                              p1 = 0;
+  69   3                              delay(18);
+  70   3                              p1 = 1; 
+  71   3                              delay(2);
+  72   3                      }else if(1 == switch_action){
+  73   3                              p1 = 0;
+  74   3                              delay(19);
+  75   3                              p1 = 1; 
+  76   3                              delay(1);
+  77   3                      }else if(2 == switch_action){
+  78   3                              p2 = 0;
+  79   3                              delay(18);
+  80   3                              p2 = 1; 
+  81   3                              delay(2);
+  82   3                      }else if(3 == switch_action){
+  83   3                              p2 = 0;
+  84   3                              delay(18.5);
+  85   3                              p2 = 1; 
+  86   3                              delay(1.5);
+  87   3                      }
+  88   2                      if(-1 != switch_action){
+  89   3                              index++;
+  90   3                      }
+  91   2                      if(300<index) {
+  92   3                              switch_action = -1;
+  93   3                              index = 0 ;
+  94   3                      }
+  95   2                      p1 = 0;
+  96   2                      p2 = 0;
+  97   2              }               
+  98   1      }
+  99          
+ 100          void drive_execute (uint direction) {
+*** WARNING C235 IN LINE 100 OF MAIN.C: parameter 1: different types
+ 101   1              P0 = direction;
+ 102   1              switch(direction){
+ 103   2                      case 'a':
+ 104   2                              P2 = 0X96;
+ 105   2                              delay(1000);
+ 106   2                              P2 = 0X00;
+ 107   2                      break;
+ 108   2                      case 'c':
+ 109   2                              P2 = 0X90;
+ 110   2                              delay(1000);
+ 111   2                              P2 = 0X00;
+ 112   2                      break;
+ 113   2                      case 'd':
+ 114   2                              P2 = 0X06;
+ 115   2                              delay(1000);
+ 116   2                              P2 = 0X00;
+C51 COMPILER V7.06   MAIN                                                                  05/26/2024 18:20:27 PAGE 3   
+
+ 117   2                      break;
+ 118   2                      case 'b':
+ 119   2                              P2 = 0X69;
+ 120   2                              delay(1000);
+ 121   2                              P2 = 0X00;
+ 122   2                      break;
+ 123   2                      case 'e':
+ 124   2                              switch_action = 2;
+ 125   2                              delay(10);
+ 126   2                      break;
+ 127   2                      case '2':
+ 128   2                              switch_action = 3;
+ 129   2                              delay(10);
+ 130   2                      break;
+ 131   2                      case '1':
+ 132   2                              switch_action = 0;
+ 133   2                              delay(10);
+ 134   2                      break;
+ 135   2                      case '3':
+ 136   2                              switch_action = 1;
+ 137   2                              delay(10);
+ 138   2                      break;
+ 139   2              }
+ 140   1              P0 = 0XFF;
+ 141   1      }
+ 142          
+ 143          
+ 144          
+ 145          
+ 146          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    348    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

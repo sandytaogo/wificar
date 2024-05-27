@@ -4,11 +4,10 @@
  * @author txf
  * date 2020-04-12 12:12:12
  */
+#include "util.h"
 #include "intrins.h"
 
-#define uchar unsigned char 
-#define uint unsigned int
-
+unsigned char code dofly_DuanMa[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};// ÏÔÊ¾¶ÎÂëÖµ0~9
 
 static struct modal {
 	int time;

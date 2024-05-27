@@ -6,9 +6,6 @@
 */
 #include<reg52.h> //包含头文件，一般情况不需要改动，头文件包含特殊功能寄存器的定义
 #include "util.h"
-#define uchar unsigned char 
-#define uint unsigned int
-unsigned char code dofly_DuanMa[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};// 显示段码值0~9
 sbit Trig  = P3^4; //雷达产生脉冲引脚
 sbit Echo  = P3^5; //接收雷达回波引脚
 sbit p1 = P1^0;

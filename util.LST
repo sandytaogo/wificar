@@ -1,4 +1,4 @@
-C51 COMPILER V7.06   UTIL                                                                  05/26/2024 18:20:27 PAGE 1   
+C51 COMPILER V7.06   UTIL                                                                  05/27/2024 10:00:12 PAGE 1   
 
 
 C51 COMPILER V7.06, COMPILATION OF MODULE UTIL
@@ -13,28 +13,27 @@ stmt level    source
    4           * @author txf
    5           * date 2020-04-12 12:12:12
    6           */
-   7          #include "intrins.h"
-   8          
-   9          #define uchar unsigned char 
-  10          #define uint unsigned int
+   7          #include "util.h"
+   8          #include "intrins.h"
+   9          
+  10          unsigned char code dofly_DuanMa[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};// œ‘ æ∂Œ¬Î÷µ0~9
   11          
-  12          
-  13          static struct modal {
-  14                  int time;
-  15                  int clock;
-  16          };
-  17          
-  18          void delay(uint b){
-  19   1              uint i = 0,j = 0;
-  20   1              for(i=0; i < b; i++) {
-  21   2                      for(j=0;j<111;j++);
-  22   2              }
-  23   1      }
+  12          static struct modal {
+  13                  int time;
+  14                  int clock;
+  15          };
+  16          
+  17          void delay(uint b){
+  18   1              uint i = 0,j = 0;
+  19   1              for(i=0; i < b; i++) {
+  20   2                      for(j=0;j<111;j++);
+  21   2              }
+  22   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =     32    ----
-   CONSTANT SIZE    =   ----    ----
+   CONSTANT SIZE    =     10    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----

@@ -1,4 +1,4 @@
-C51 COMPILER V7.06   MAIN                                                                  05/27/2024 10:00:12 PAGE 1   
+C51 COMPILER V7.06   MAIN                                                                  05/27/2024 16:52:58 PAGE 1   
 
 
 C51 COMPILER V7.06, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ stmt level    source
   53   1              if(RI) {
   54   2                      RI = 0;/*RI: flag reset*/
   55   2                      temp = SBUF; /*receive value*/
-C51 COMPILER V7.06   MAIN                                                                  05/27/2024 10:00:12 PAGE 2   
+C51 COMPILER V7.06   MAIN                                                                  05/27/2024 16:52:58 PAGE 2   
 
   56   2                      drive_execute(temp); 
   57   2              }
@@ -105,8 +105,7 @@ stmt level    source
   94   2              }               
   95   1      }
   96          
-  97          void drive_execute (uint direction) {
-*** WARNING C235 IN LINE 97 OF MAIN.C: parameter 1: different types
+  97          void drive_execute (uchar direction) {
   98   1              P0 = direction;
   99   1              switch(direction){
  100   2                      case 'a':
@@ -126,9 +125,9 @@ stmt level    source
  114   2                      break;
  115   2                      case 'b':
  116   2                              P2 = 0X69;
-C51 COMPILER V7.06   MAIN                                                                  05/27/2024 10:00:12 PAGE 3   
-
  117   2                              delay(1000);
+C51 COMPILER V7.06   MAIN                                                                  05/27/2024 16:52:58 PAGE 3   
+
  118   2                              P2 = 0X00;
  119   2                      break;
  120   2                      case 'e':
@@ -158,7 +157,7 @@ stmt level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    348    ----
+   CODE SIZE        =    345    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
@@ -168,4 +167,4 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

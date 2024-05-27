@@ -94,7 +94,7 @@ void main ( void ) {
 	}		
 }
 
-void drive_execute (uint direction) {
+void drive_execute (uchar direction) {
 	P0 = direction;
 	switch(direction){
 		case 'a':

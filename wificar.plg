@@ -4,187 +4,12 @@
 <h1>µVision2 Build Log</h1>
 <h2>Project:</h2>
 F:\workspace\git\wificar\wificar.uv2
-Project File Date:  05/26/2024
+Project File Date:  05/27/2024
 
 <h2>Output:</h2>
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling main.c...
-MAIN.C(100): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(100): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-UTIL.C(15): error C141: syntax error near 'b', expected ')'
-UTIL.C(16): error C141: syntax error near 'i'
-UTIL.C(16): error C202: 'i': undefined identifier
-UTIL.C(17): error C202: 'i': undefined identifier
-UTIL.C(18): error C202: 'j': undefined identifier
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  DOFLY_DUANMA
-    MODULE:  util.obj (UTIL)
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=551
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(9): error C279: 'dofly_DuanMa': multiple initialization
-compiling util.c...
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  DOFLY_DUANMA
-    MODULE:  util.obj (UTIL)
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=551
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  DOFLY_DUANMA
-    MODULE:  util.obj (UTIL)
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=551
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-Program Size: data=13.0 xdata=0 code=541
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(98): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=541
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
 MAIN.C(97): warning C235: parameter 1: different types
 compiling util.c...
 linking...
@@ -195,110 +20,17 @@ linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?CO?UTIL
 Program Size: data=13.0 xdata=0 code=541
-creating hex file from "wificar"...
 "wificar" - 0 Error(s), 4 Warning(s).
 Build target 'Target 1'
 assembling STARTUP.A51...
 compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
 compiling util.c...
 linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?EX_INIT?MAIN
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?TIM_INIT?MAIN
-Program Size: data=13.0 xdata=0 code=531
-creating hex file from "wificar"...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?UTIL
+Program Size: data=13.0 xdata=0 code=538
 "wificar" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-Program Size: data=13.0 xdata=0 code=531
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-Program Size: data=13.0 xdata=0 code=531
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  DOFLY_DUANMA
-    MODULE:  util.obj (UTIL)
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=551
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-Program Size: data=13.0 xdata=0 code=531
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
-    SYMBOL:  DOFLY_DUANMA
-    MODULE:  util.obj (UTIL)
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=551
-Target not created
-Build target 'Target 1'
-assembling STARTUP.A51...
-compiling main.c...
-MAIN.C(97): warning C235: parameter 1: different types
-compiling util.c...
-linking...
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?EX_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?TIM_INIT?MAIN
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?CO?UTIL
-Program Size: data=13.0 xdata=0 code=541
-creating hex file from "wificar"...
-"wificar" - 0 Error(s), 4 Warning(s).

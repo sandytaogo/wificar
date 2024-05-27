@@ -22,10 +22,7 @@
 *.a
 *.la
 *.lo
-*.LST
-*.lst
-*.M51
-*.plg
+
 
 # Shared objects (inc. Windows DLLs)
 *.dll

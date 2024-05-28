@@ -4,8 +4,8 @@
  * @author txf
  * date 2020-04-12 12:12:12
  */
-#ifndef __ADC_H__
-#define __ADC_H__
+#ifndef __ADLCD_H__
+#define __ADLCD_H__
 
 #include "reg51.h"
 #include "intrins.h"

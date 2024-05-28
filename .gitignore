@@ -1,3 +1,5 @@
+#project 
+wificar
 # Prerequisites
 *.d
 
@@ -37,6 +39,8 @@
 *.i*86
 *.x86_64
 *.hex
+*.lst
+*.LST
 
 # Debug files
 *.dSYM/

@@ -1,4 +1,7 @@
 # wificar
+<p align="center">
+	<img src="stc89c51_architecture.png"/>
+</p>
 基于ARM STC89C52单品机控制玩具小车，采用wifi局域网络与单片机串口建立通信方式实现控制玩具汽车
 
 一、小车运动的基本原理

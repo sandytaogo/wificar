@@ -1,0 +1,46 @@
+C51 COMPILER V7.06   UTIL                                                                  06/04/2024 11:35:59 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE UTIL
+OBJECT MODULE PLACED IN util.OBJ
+COMPILER INVOKED BY: H:\keil\C51\BIN\C51.EXE util.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /*
+   2           * Copyright (C) wificar, Inc.
+   3           * 工具函数库功能实现
+   4           * @author txf
+   5           * date 2020-04-12 12:12:12
+   6           */
+   7          #include <math.h>
+   8          #include "util.h"
+   9          #include "intrins.h"
+  10          
+  11          unsigned char code dofly_DuanMa[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};// 显示段码值0~9
+  12          
+  13          static struct modal {
+  14                  int time;
+  15                  int clock;
+  16          };
+  17          
+  18          void delay(uint b){
+  19   1              uint i = 0,j = 0;
+  20   1              for(i=0; i < b; i++) {
+  21   2                      for(j=0;j<111;j++);
+  22   2              }
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     32    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -4,6 +4,7 @@
  * @author txf
  * date 2020-04-12 12:12:12
  */
+#include <math.h>
 #include "util.h"
 #include "intrins.h"
 

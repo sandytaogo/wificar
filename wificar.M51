@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V5.03                                                        05/28/2024  21:32:58  PAGE 1
+BL51 BANKED LINKER/LOCATER V5.03                                                        06/04/2024  11:35:59  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
-H:\KEIL\C51\BIN\BL51.EXE .\STARTUP.obj, main.obj, util.obj, adlcd.obj TO wificar RAMSIZE (256)
+H:\KEIL\C51\BIN\BL51.EXE .\STARTUP.obj, main.obj, util.obj TO wificar RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -12,10 +12,7 @@ INPUT MODULES INCLUDED:
   .\STARTUP.obj (?C_STARTUP)
   main.obj (MAIN)
   util.obj (UTIL)
-  adlcd.obj (ADLCD)
   H:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
-  H:\KEIL\C51\LIB\C51S.LIB (?C?ILDPTR)
-  H:\KEIL\C51\LIB\C51S.LIB (?C?ISTPTR)
 
 
 LINK MAP OF MODULE:  wificar (?C_STARTUP)
@@ -37,41 +34,38 @@ LINK MAP OF MODULE:  wificar (?C_STARTUP)
             CODE    0026H     008CH     UNIT         ?C_C51STARTUP
             CODE    00B2H     008CH     UNIT         ?PR?MAIN?MAIN
             CODE    013EH     0067H     UNIT         ?PR?_DRIVE_EXECUTE?MAIN
-            CODE    01A5H     004AH     UNIT         ?C?LIB_CODE
-            CODE    01EFH     0042H     UNIT         ?PR?COM_PORT?MAIN
-            CODE    0231H     003CH     UNIT         ?PR?_GET_ADC_RESULT?ADLCD
-            CODE    026DH     0010H     UNIT         ?PR?INIT_COM_PORT?MAIN
-            CODE    027DH     000DH     UNIT         ?PR?TIM_INIT?MAIN
-            CODE    028AH     000CH     UNIT         ?PR?INIT_ADC?ADLCD
-            CODE    0296H     000AH     UNIT         ?CO?UTIL
-            CODE    02A0H     0007H     UNIT         ?PR?EX_INIT?MAIN
-            CODE    02A7H     0005H     UNIT         ?C_INITSEG
+            CODE    01A5H     0042H     UNIT         ?PR?COM_PORT?MAIN
+            CODE    01E7H     0010H     UNIT         ?PR?INIT_COM_PORT?MAIN
+            CODE    01F7H     000DH     UNIT         ?PR?TIM_INIT?MAIN
+            CODE    0204H     000AH     UNIT         ?CO?UTIL
+            CODE    020EH     0007H     UNIT         ?PR?EX_INIT?MAIN
+            CODE    0215H     0005H     UNIT         ?C_INITSEG
 
 
 
 OVERLAY MAP OF MODULE:   wificar (?C_STARTUP)
 
 
-SEGMENT                             DATA_GROUP 
-  +--> CALLED SEGMENT             START    LENGTH
--------------------------------------------------
-?C_C51STARTUP                     -----    -----
+SEGMENT                           DATA_GROUP 
+  +--> CALLED SEGMENT           START    LENGTH
+-----------------------------------------------
+?C_C51STARTUP                   -----    -----
   +--> ?PR?MAIN?MAIN
   +--> ?C_INITSEG
 
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 2
-
-
-?PR?MAIN?MAIN                     000AH    0002H
+?PR?MAIN?MAIN                   000AH    0002H
   +--> ?PR?INIT_COM_PORT?MAIN
   +--> ?PR?_DELAY?UTIL
 
 *** NEW ROOT ***************************************************
 
-?PR?COM_PORT?MAIN                 -----    -----
+BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 2
+
+
+?PR?COM_PORT?MAIN               -----    -----
   +--> ?PR?_DRIVE_EXECUTE?MAIN
 
-?PR?_DRIVE_EXECUTE?MAIN           -----    -----
+?PR?_DRIVE_EXECUTE?MAIN         -----    -----
   +--> ?PR?_DELAY?UTIL
 
 
@@ -117,17 +111,17 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
 
   -------         MODULE        MAIN
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:026DH         PUBLIC        init_com_port
+  C:01E7H         PUBLIC        init_com_port
   D:0080H         PUBLIC        P0
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 3
-
-
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   B:00A8H.7       PUBLIC        EA
   D:00A8H         PUBLIC        IE
   B:00A8H.4       PUBLIC        ES
+BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 3
+
+
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   B:0090H.0       PUBLIC        p1
@@ -146,146 +140,146 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
   C:013EH         PUBLIC        _drive_execute
   B:0088H.4       PUBLIC        TR0
   B:0088H.6       PUBLIC        TR1
-  C:027DH         PUBLIC        tim_init
+  C:01F7H         PUBLIC        tim_init
   D:00C8H         PUBLIC        T2CON
-  C:01EFH         PUBLIC        com_port
-  C:02A0H         PUBLIC        ex_init
+  C:01A5H         PUBLIC        com_port
+  C:020EH         PUBLIC        ex_init
   D:0008H         PUBLIC        switch_action
   D:00D0H         PUBLIC        PSW
   -------         PROC          INIT_COM_PORT
-  C:026DH         LINE#         21
-  C:026DH         LINE#         22
-  C:0270H         LINE#         23
-  C:0273H         LINE#         25
-  C:0276H         LINE#         27
-  C:0278H         LINE#         28
-  C:027AH         LINE#         29
-  C:027CH         LINE#         32
+  C:01E7H         LINE#         22
+  C:01E7H         LINE#         23
+  C:01EAH         LINE#         24
+  C:01EDH         LINE#         26
+  C:01F0H         LINE#         28
+  C:01F2H         LINE#         29
+  C:01F4H         LINE#         30
+  C:01F6H         LINE#         33
   -------         ENDPROC       INIT_COM_PORT
   -------         PROC          EX_INIT
-  C:02A0H         LINE#         35
-  C:02A0H         LINE#         36
-  C:02A2H         LINE#         37
-  C:02A4H         LINE#         38
-  C:02A6H         LINE#         39
+  C:020EH         LINE#         36
+  C:020EH         LINE#         37
+  C:0210H         LINE#         38
+  C:0212H         LINE#         39
+  C:0214H         LINE#         40
   -------         ENDPROC       EX_INIT
   -------         PROC          TIM_INIT
-  C:027DH         LINE#         42
-  C:027DH         LINE#         43
-  C:0280H         LINE#         44
-  C:0283H         LINE#         45
-  C:0285H         LINE#         46
-  C:0287H         LINE#         47
-  C:0289H         LINE#         48
+  C:01F7H         LINE#         43
+  C:01F7H         LINE#         44
+  C:01FAH         LINE#         45
+  C:01FDH         LINE#         46
+  C:01FFH         LINE#         47
+  C:0201H         LINE#         48
+  C:0203H         LINE#         49
   -------         ENDPROC       TIM_INIT
   -------         PROC          COM_PORT
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 4
-
-
   -------         DO            
   D:0007H         SYMBOL        temp
   -------         ENDDO         
-  C:01EFH         LINE#         51
-  C:020CH         LINE#         53
-  C:020FH         LINE#         54
-  C:0211H         LINE#         55
-  C:0213H         LINE#         56
-  C:0216H         LINE#         57
-  C:0216H         LINE#         58
+  C:01A5H         LINE#         52
+  C:01C2H         LINE#         54
+  C:01C5H         LINE#         55
+BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 4
+
+
+  C:01C7H         LINE#         56
+  C:01C9H         LINE#         57
+  C:01CCH         LINE#         58
+  C:01CCH         LINE#         59
   -------         ENDPROC       COM_PORT
   -------         PROC          MAIN
   -------         DO            
   D:000AH         SYMBOL        index
   -------         ENDDO         
-  C:00B2H         LINE#         60
   C:00B2H         LINE#         61
-  C:00B7H         LINE#         62
-  C:00BAH         LINE#         63
+  C:00B2H         LINE#         62
+  C:00B7H         LINE#         63
   C:00BAH         LINE#         64
-  C:00C0H         LINE#         65
-  C:00C2H         LINE#         66
-  C:00C8H         LINE#         67
-  C:00CAH         LINE#         68
+  C:00BAH         LINE#         65
+  C:00C0H         LINE#         66
+  C:00C2H         LINE#         67
+  C:00C8H         LINE#         68
   C:00CAH         LINE#         69
-  C:00D4H         LINE#         70
-  C:00D6H         LINE#         71
-  C:00DCH         LINE#         72
-  C:00DEH         LINE#         73
+  C:00CAH         LINE#         70
+  C:00D4H         LINE#         71
+  C:00D6H         LINE#         72
+  C:00DCH         LINE#         73
   C:00DEH         LINE#         74
-  C:00E8H         LINE#         75
-  C:00EAH         LINE#         76
-  C:00F0H         LINE#         77
-  C:00F2H         LINE#         78
-  C:00F4H         LINE#         79
-  C:00FEH         LINE#         80
-  C:0100H         LINE#         81
-  C:0106H         LINE#         82
-  C:0108H         LINE#         83
-  C:010FH         LINE#         84
+  C:00DEH         LINE#         75
+  C:00E8H         LINE#         76
+  C:00EAH         LINE#         77
+  C:00F0H         LINE#         78
+  C:00F2H         LINE#         79
+  C:00F4H         LINE#         80
+  C:00FEH         LINE#         81
+  C:0100H         LINE#         82
+  C:0106H         LINE#         83
+  C:0108H         LINE#         84
   C:010FH         LINE#         85
-  C:0119H         LINE#         86
-  C:0121H         LINE#         87
+  C:010FH         LINE#         86
+  C:0119H         LINE#         87
   C:0121H         LINE#         88
-  C:012CH         LINE#         89
-  C:0132H         LINE#         90
-  C:0137H         LINE#         91
+  C:0121H         LINE#         89
+  C:012CH         LINE#         90
+  C:0132H         LINE#         91
   C:0137H         LINE#         92
-  C:0139H         LINE#         93
-  C:013BH         LINE#         94
+  C:0137H         LINE#         93
+  C:0139H         LINE#         94
+  C:013BH         LINE#         95
   -------         ENDPROC       MAIN
   -------         PROC          _DRIVE_EXECUTE
   D:0007H         SYMBOL        direction
-  C:013EH         LINE#         97
   C:013EH         LINE#         98
-  C:0140H         LINE#         99
-  C:015CH         LINE#         100
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 5
-
-
+  C:013EH         LINE#         99
+  C:0140H         LINE#         100
   C:015CH         LINE#         101
-  C:015FH         LINE#         102
+  C:015CH         LINE#         102
   C:015FH         LINE#         103
   C:015FH         LINE#         104
-  C:0161H         LINE#         105
+  C:015FH         LINE#         105
   C:0161H         LINE#         106
-  C:0164H         LINE#         107
+  C:0161H         LINE#         107
+BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 5
+
+
   C:0164H         LINE#         108
   C:0164H         LINE#         109
-  C:0166H         LINE#         110
+  C:0164H         LINE#         110
   C:0166H         LINE#         111
-  C:0169H         LINE#         112
+  C:0166H         LINE#         112
   C:0169H         LINE#         113
   C:0169H         LINE#         114
-  C:016BH         LINE#         115
+  C:0169H         LINE#         115
   C:016BH         LINE#         116
-  C:016EH         LINE#         117
-  C:0175H         LINE#         118
-  C:0178H         LINE#         119
-  C:017AH         LINE#         120
+  C:016BH         LINE#         117
+  C:016EH         LINE#         118
+  C:0175H         LINE#         119
+  C:0178H         LINE#         120
   C:017AH         LINE#         121
-  C:0180H         LINE#         122
+  C:017AH         LINE#         122
   C:0180H         LINE#         123
-  C:0182H         LINE#         124
+  C:0180H         LINE#         124
   C:0182H         LINE#         125
-  C:0188H         LINE#         126
+  C:0182H         LINE#         126
   C:0188H         LINE#         127
-  C:018AH         LINE#         128
+  C:0188H         LINE#         128
   C:018AH         LINE#         129
-  C:018FH         LINE#         130
-  C:0192H         LINE#         131
-  C:0194H         LINE#         132
+  C:018AH         LINE#         130
+  C:018FH         LINE#         131
+  C:0192H         LINE#         132
   C:0194H         LINE#         133
-  C:019AH         LINE#         134
-  C:01A1H         LINE#         135
+  C:0194H         LINE#         134
+  C:019AH         LINE#         135
   C:01A1H         LINE#         136
   C:01A1H         LINE#         137
-  C:01A4H         LINE#         138
+  C:01A1H         LINE#         138
+  C:01A4H         LINE#         139
   -------         ENDPROC       _DRIVE_EXECUTE
   -------         ENDMOD        MAIN
 
   -------         MODULE        UTIL
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:0296H         PUBLIC        dofly_DuanMa
+  C:0204H         PUBLIC        dofly_DuanMa
   C:0003H         PUBLIC        _delay
   -------         PROC          _DELAY
   D:0006H         SYMBOL        b
@@ -293,65 +287,20 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
   D:0004H         SYMBOL        i
   D:0002H         SYMBOL        j
   -------         ENDDO         
-  C:0003H         LINE#         17
   C:0003H         LINE#         18
-  C:0006H         LINE#         19
-  C:000DH         LINE#         20
-  C:001BH         LINE#         21
-  C:0022H         LINE#         22
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 6
-
-
+  C:0003H         LINE#         19
+  C:0006H         LINE#         20
+  C:000DH         LINE#         21
+  C:001BH         LINE#         22
+  C:0022H         LINE#         23
   -------         ENDPROC       _DELAY
   -------         ENDMOD        UTIL
 
-  -------         MODULE        ADLCD
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  D:00BDH         PUBLIC        ADC_RES
-  C:0231H         PUBLIC        _get_adc_result
-  D:00BCH         PUBLIC        ADC_CONTR
-  C:028AH         PUBLIC        init_adc
-  D:00BEH         PUBLIC        ADC_LOW2
-  D:009DH         PUBLIC        P1ASF
-  -------         PROC          _GET_ADC_RESULT
-  D:0007H         SYMBOL        ch
-  D:0001H         SYMBOL        value
-  C:0231H         LINE#         12
-  C:0231H         LINE#         13
-  C:0231H         LINE#         14
-  C:0236H         LINE#         15
-  C:0237H         LINE#         16
-  C:0238H         LINE#         17
-  C:0239H         LINE#         18
-  C:023AH         LINE#         19
-  C:023BH         LINE#         20
-  C:023CH         LINE#         21
-  C:0241H         LINE#         22
-  C:0244H         LINE#         23
-  C:024AH         LINE#         24
-  C:0252H         LINE#         25
-  -------         ENDPROC       _GET_ADC_RESULT
-  -------         PROC          INIT_ADC
-  C:028AH         LINE#         31
-  C:028AH         LINE#         32
-  C:028AH         LINE#         34
-  C:028DH         LINE#         35
-  C:0290H         LINE#         36
-  C:0292H         LINE#         37
-  C:0295H         LINE#         39
-  -------         ENDPROC       INIT_ADC
-  -------         ENDMOD        ADLCD
-
-  -------         MODULE        ?C?ILDPTR
-  C:01A5H         PUBLIC        ?C?ILDPTR
-  -------         ENDMOD        ?C?ILDPTR
-
-  -------         MODULE        ?C?ISTPTR
-  C:01D0H         PUBLIC        ?C?ISTPTR
-  -------         ENDMOD        ?C?ISTPTR
-
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?EX_INIT?MAIN
+
+BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 6
+
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?TIM_INIT?MAIN
@@ -359,14 +308,5 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?CO?UTIL
 
-BL51 BANKED LINKER/LOCATER V5.03                                                      05/28/2024  21:32:58  PAGE 7
-
-
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_GET_ADC_RESULT?ADLCD
-
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?INIT_ADC?ADLCD
-
-Program Size: data=13.0 xdata=0 code=684
-LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)
+Program Size: data=13.0 xdata=0 code=538
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

@@ -6,6 +6,7 @@
 */
 #include<reg52.h> //包含头文件，一般情况不需要改动，头文件包含特殊功能寄存器的定义
 #include "util.h"
+#include <math.h>
 sbit Trig  = P3^4; //雷达产生脉冲引脚
 sbit Echo  = P3^5; //接收雷达回波引脚
 sbit p1 = P1^0;

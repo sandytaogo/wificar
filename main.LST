@@ -1,4 +1,4 @@
-C51 COMPILER V7.06   MAIN                                                                  06/04/2024 11:35:59 PAGE 1   
+C51 COMPILER V7.06   MAIN                                                                  12/14/2024 17:13:28 PAGE 1   
 
 
 C51 COMPILER V7.06, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ stmt level    source
   53   1              unsigned char temp;
   54   1              if(RI) {
   55   2                      RI = 0;/*RI: flag reset*/
-C51 COMPILER V7.06   MAIN                                                                  06/04/2024 11:35:59 PAGE 2   
+C51 COMPILER V7.06   MAIN                                                                  12/14/2024 17:13:28 PAGE 2   
 
   56   2                      temp = SBUF; /*receive value*/
   57   2                      drive_execute(temp); 
@@ -126,7 +126,7 @@ stmt level    source
  115   2                      break;
  116   2                      case 'b':
  117   2                              P2 = 0X69;
-C51 COMPILER V7.06   MAIN                                                                  06/04/2024 11:35:59 PAGE 3   
+C51 COMPILER V7.06   MAIN                                                                  12/14/2024 17:13:28 PAGE 3   
 
  118   2                              delay(1000);
  119   2                              P2 = 0X00;

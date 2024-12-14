@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V5.03                                                        06/04/2024  11:35:59  PAGE 1
+BL51 BANKED LINKER/LOCATER V5.03                                                        12/14/2024  17:13:28  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
-H:\KEIL\C51\BIN\BL51.EXE .\STARTUP.obj, main.obj, util.obj TO wificar RAMSIZE (256)
+H:\KEIL\C51\BIN\BL51.EXE .\STARTUP.obj, main.obj, util.obj, ADC.obj TO wificar RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -12,7 +12,10 @@ INPUT MODULES INCLUDED:
   .\STARTUP.obj (?C_STARTUP)
   main.obj (MAIN)
   util.obj (UTIL)
+  ADC.obj (ADC)
   H:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  H:\KEIL\C51\LIB\C51S.LIB (?C?ILDPTR)
+  H:\KEIL\C51\LIB\C51S.LIB (?C?ISTPTR)
 
 
 LINK MAP OF MODULE:  wificar (?C_STARTUP)
@@ -34,12 +37,15 @@ LINK MAP OF MODULE:  wificar (?C_STARTUP)
             CODE    0026H     008CH     UNIT         ?C_C51STARTUP
             CODE    00B2H     008CH     UNIT         ?PR?MAIN?MAIN
             CODE    013EH     0067H     UNIT         ?PR?_DRIVE_EXECUTE?MAIN
-            CODE    01A5H     0042H     UNIT         ?PR?COM_PORT?MAIN
-            CODE    01E7H     0010H     UNIT         ?PR?INIT_COM_PORT?MAIN
-            CODE    01F7H     000DH     UNIT         ?PR?TIM_INIT?MAIN
-            CODE    0204H     000AH     UNIT         ?CO?UTIL
-            CODE    020EH     0007H     UNIT         ?PR?EX_INIT?MAIN
-            CODE    0215H     0005H     UNIT         ?C_INITSEG
+            CODE    01A5H     004AH     UNIT         ?C?LIB_CODE
+            CODE    01EFH     0042H     UNIT         ?PR?COM_PORT?MAIN
+            CODE    0231H     003CH     UNIT         ?PR?_GETADCRESULT?ADC
+            CODE    026DH     0010H     UNIT         ?PR?INIT_COM_PORT?MAIN
+            CODE    027DH     000DH     UNIT         ?PR?TIM_INIT?MAIN
+            CODE    028AH     000CH     UNIT         ?PR?INITADC?ADC
+            CODE    0296H     000AH     UNIT         ?CO?UTIL
+            CODE    02A0H     0007H     UNIT         ?PR?EX_INIT?MAIN
+            CODE    02A7H     0005H     UNIT         ?C_INITSEG
 
 
 
@@ -53,14 +59,14 @@ SEGMENT                           DATA_GROUP
   +--> ?PR?MAIN?MAIN
   +--> ?C_INITSEG
 
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 2
+
+
 ?PR?MAIN?MAIN                   000AH    0002H
   +--> ?PR?INIT_COM_PORT?MAIN
   +--> ?PR?_DELAY?UTIL
 
 *** NEW ROOT ***************************************************
-
-BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 2
-
 
 ?PR?COM_PORT?MAIN               -----    -----
   +--> ?PR?_DRIVE_EXECUTE?MAIN
@@ -111,17 +117,17 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
 
   -------         MODULE        MAIN
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:01E7H         PUBLIC        init_com_port
+  C:026DH         PUBLIC        init_com_port
   D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 3
+
+
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   B:00A8H.7       PUBLIC        EA
   D:00A8H         PUBLIC        IE
   B:00A8H.4       PUBLIC        ES
-BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 3
-
-
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   B:0090H.0       PUBLIC        p1
@@ -140,52 +146,52 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
   C:013EH         PUBLIC        _drive_execute
   B:0088H.4       PUBLIC        TR0
   B:0088H.6       PUBLIC        TR1
-  C:01F7H         PUBLIC        tim_init
+  C:027DH         PUBLIC        tim_init
   D:00C8H         PUBLIC        T2CON
-  C:01A5H         PUBLIC        com_port
-  C:020EH         PUBLIC        ex_init
+  C:01EFH         PUBLIC        com_port
+  C:02A0H         PUBLIC        ex_init
   D:0008H         PUBLIC        switch_action
   D:00D0H         PUBLIC        PSW
   -------         PROC          INIT_COM_PORT
-  C:01E7H         LINE#         22
-  C:01E7H         LINE#         23
-  C:01EAH         LINE#         24
-  C:01EDH         LINE#         26
-  C:01F0H         LINE#         28
-  C:01F2H         LINE#         29
-  C:01F4H         LINE#         30
-  C:01F6H         LINE#         33
+  C:026DH         LINE#         22
+  C:026DH         LINE#         23
+  C:0270H         LINE#         24
+  C:0273H         LINE#         26
+  C:0276H         LINE#         28
+  C:0278H         LINE#         29
+  C:027AH         LINE#         30
+  C:027CH         LINE#         33
   -------         ENDPROC       INIT_COM_PORT
   -------         PROC          EX_INIT
-  C:020EH         LINE#         36
-  C:020EH         LINE#         37
-  C:0210H         LINE#         38
-  C:0212H         LINE#         39
-  C:0214H         LINE#         40
+  C:02A0H         LINE#         36
+  C:02A0H         LINE#         37
+  C:02A2H         LINE#         38
+  C:02A4H         LINE#         39
+  C:02A6H         LINE#         40
   -------         ENDPROC       EX_INIT
   -------         PROC          TIM_INIT
-  C:01F7H         LINE#         43
-  C:01F7H         LINE#         44
-  C:01FAH         LINE#         45
-  C:01FDH         LINE#         46
-  C:01FFH         LINE#         47
-  C:0201H         LINE#         48
-  C:0203H         LINE#         49
+  C:027DH         LINE#         43
+  C:027DH         LINE#         44
+  C:0280H         LINE#         45
+  C:0283H         LINE#         46
+  C:0285H         LINE#         47
+  C:0287H         LINE#         48
+  C:0289H         LINE#         49
   -------         ENDPROC       TIM_INIT
   -------         PROC          COM_PORT
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 4
+
+
   -------         DO            
   D:0007H         SYMBOL        temp
   -------         ENDDO         
-  C:01A5H         LINE#         52
-  C:01C2H         LINE#         54
-  C:01C5H         LINE#         55
-BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 4
-
-
-  C:01C7H         LINE#         56
-  C:01C9H         LINE#         57
-  C:01CCH         LINE#         58
-  C:01CCH         LINE#         59
+  C:01EFH         LINE#         52
+  C:020CH         LINE#         54
+  C:020FH         LINE#         55
+  C:0211H         LINE#         56
+  C:0213H         LINE#         57
+  C:0216H         LINE#         58
+  C:0216H         LINE#         59
   -------         ENDPROC       COM_PORT
   -------         PROC          MAIN
   -------         DO            
@@ -233,15 +239,15 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
   C:013EH         LINE#         99
   C:0140H         LINE#         100
   C:015CH         LINE#         101
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 5
+
+
   C:015CH         LINE#         102
   C:015FH         LINE#         103
   C:015FH         LINE#         104
   C:015FH         LINE#         105
   C:0161H         LINE#         106
   C:0161H         LINE#         107
-BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 5
-
-
   C:0164H         LINE#         108
   C:0164H         LINE#         109
   C:0164H         LINE#         110
@@ -279,7 +285,7 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
 
   -------         MODULE        UTIL
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:0204H         PUBLIC        dofly_DuanMa
+  C:0296H         PUBLIC        dofly_DuanMa
   C:0003H         PUBLIC        _delay
   -------         PROC          _DELAY
   D:0006H         SYMBOL        b
@@ -293,14 +299,59 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
   C:000DH         LINE#         21
   C:001BH         LINE#         22
   C:0022H         LINE#         23
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 6
+
+
   -------         ENDPROC       _DELAY
   -------         ENDMOD        UTIL
 
+  -------         MODULE        ADC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00BDH         PUBLIC        ADC_RES
+  D:00BCH         PUBLIC        ADC_CONTR
+  C:0231H         PUBLIC        _GetADCResult
+  D:00BEH         PUBLIC        ADC_LOW2
+  D:009DH         PUBLIC        P1ASF
+  C:028AH         PUBLIC        InitADC
+  -------         PROC          _GETADCRESULT
+  D:0007H         SYMBOL        ch
+  D:0001H         SYMBOL        value
+  C:0231H         LINE#         6
+  C:0231H         LINE#         7
+  C:0231H         LINE#         8
+  C:0236H         LINE#         9
+  C:0237H         LINE#         10
+  C:0238H         LINE#         11
+  C:0239H         LINE#         12
+  C:023AH         LINE#         13
+  C:023BH         LINE#         14
+  C:023CH         LINE#         15
+  C:0241H         LINE#         16
+  C:0244H         LINE#         18
+  C:024AH         LINE#         19
+  C:0252H         LINE#         20
+  -------         ENDPROC       _GETADCRESULT
+  -------         PROC          INITADC
+  C:028AH         LINE#         25
+  C:028AH         LINE#         26
+  C:028AH         LINE#         28
+  C:028DH         LINE#         30
+  C:0290H         LINE#         31
+  C:0292H         LINE#         32
+  C:0295H         LINE#         35
+  -------         ENDPROC       INITADC
+  -------         ENDMOD        ADC
+
+  -------         MODULE        ?C?ILDPTR
+  C:01A5H         PUBLIC        ?C?ILDPTR
+  -------         ENDMOD        ?C?ILDPTR
+
+  -------         MODULE        ?C?ISTPTR
+  C:01D0H         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?EX_INIT?MAIN
-
-BL51 BANKED LINKER/LOCATER V5.03                                                      06/04/2024  11:35:59  PAGE 6
-
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?TIM_INIT?MAIN
@@ -308,5 +359,14 @@ SYMBOL TABLE OF MODULE:  wificar (?C_STARTUP)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?CO?UTIL
 
-Program Size: data=13.0 xdata=0 code=538
-LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)
+BL51 BANKED LINKER/LOCATER V5.03                                                      12/14/2024  17:13:28  PAGE 7
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_GETADCRESULT?ADC
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITADC?ADC
+
+Program Size: data=13.0 xdata=0 code=684
+LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)
